@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'students',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,7 +54,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'studentsdb.urls'
 
 TEMPLATES = [
-    {
+    {-
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
