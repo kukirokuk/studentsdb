@@ -22,7 +22,7 @@ def students_list(request):
 		'first_name': u'Хуліо',
 		'last_name': u'Іглесіас',
 		'ticket': 25,
-		'image': 'img/hulio.jpg'
+		'image': 'img/hulio.jpg',
 		},
 		)
 	return render(request, 'students/students_list.html', {'students': students})
@@ -38,8 +38,39 @@ def students_delete(request, sid):
 
 #Views for Groups		
 
+# def groups_list(request):
+# 	groups = (
+# 		{'id': 1,
+# 		'name': u'MMM-11',
+# 		'leader': u'Елвіс Преслі'
+# 		},
+# 		{'id': 2,
+# 		'name': u'MMM-21',
+# 		'leader': u'Фредді Мерк"юрі'
+# 		},
+# 		{'id': 3,
+# 		'name': u'MMM-31',
+# 		'leader': u'Хуліо Іглесіас'
+# 		},
+# 		)
+# 	return render(request, 'students/groups_list.html' {'groups': groups})
+
 def groups_list(request):
-	return HttpResponse('<h1>Grouprs Listing</h1>')
+    groups = (
+        {'id': 1,
+         'name': u'МММ-11',
+         'leader': u'Елвіс Преслі'
+         },
+        {'id': 2,
+         'name': u'МММ-21',
+         'leader': u'Фредді Мерк"юрі'
+         },
+         {'id': 3,
+         'name': u'МММ-31',
+         'leader': u'Хуліо Іглесіас'
+         },
+         )
+    return render(request, 'students/groups_list.html', {'groups': groups})
 
 def groups_add(request):
 	return HttpResponse('<h1>Grouprs Add Form</h1>')
