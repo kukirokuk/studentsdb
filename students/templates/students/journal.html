@@ -1,0 +1,112 @@
+				{% extends "students/base.html" %}
+
+				{% load static from staticfiles %}
+
+				{% block meta_title %} Відвідування {% endblock meta_title %}
+
+				{% block title %} Облік відвідування {% endblock title %}
+
+
+				<!-- Add student button -->
+				{%block but%}
+				<a class="btn btn-primary" href="#">Додати студента</a>
+				{%endblock but%}
+
+				{% block content %}
+			<div class="row" id="month">
+				<h4>&#8592;Жовтень&#8594;</h4>
+			</div>
+		<div class="row" id="content-columns">
+			<div class="col-xs-12" id="content-coulumn">
+
+
+				<div>
+					<!-- Start Students Listing -->
+					<table class="table table-hover table-striped table-bordered">
+						<thead>
+							<tr>
+								<th><a href="">#</a></th>
+								<th><a href="#">Студент &uarr;</a></th>
+								<th>Ср 1</th>
+								<th>Чт 2</th>
+								<th>Пт 3</th>
+								<th>Сб 4</th>
+								<th>Нд 5</th>
+								<th>Пн 6</th>
+								<th>Вт 7</th>
+								<th>Ср 8</th>
+								<th>Чт 9</th>
+								<th>Пт 10</th>
+								<th>Сб 11</th>
+								<th>Нд 12</th>
+								<th>Пн 13</th>
+								<th>Вт 14</th>
+								<th>Ср 15</th>
+								<th>Чт 16</th>
+								<th>Пт 17</th>
+								<th>Сб 18</th>
+								<th>Нд 19</th>
+								<th>Пн 20</th>
+								<th>Вт 21</th>
+								<th>Ср 22</th>
+								<th>Чт 23</th>
+								<th>Пт 24</th>
+								<th>Сб 25</th>
+								<th>Нд 26</th>
+								<th>Пн 27</th>
+								<th>Вт 28</th>
+								<th>Ср 29</th>
+								<th>Чт 30</th>
+								<th>Пт 31</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for student in students %}
+							<tr>
+								<td>1</td>
+								<td><a href="{%url "students_edit" student.id %}">{{student.first_name}} {{student.last_name}}</a></td>
+								<td><input type="checkbox" checked></td>
+								<td><input type="checkbox" checked></td>
+								<td><input type="checkbox" checked></td>
+								<td><input type="checkbox" checked></td>
+								<td><input type="checkbox" checked></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+								<td><input type="checkbox" ></td>
+
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+
+					<!-- End Students Listing -->
+				</div>
+			
+			</div>
+		</div>
+		<!-- End Main Page Content -->
+
+					{% endblock content %}

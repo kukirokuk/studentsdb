@@ -17,6 +17,9 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+	#Journal urls
+	url(r'journal$', 'students.views.journal.journal', name='journal'),
+	#Students urls
 	url(r'^$', 'students.views.students.students_list', name='home'),
 	url(r'students/add/$', 'students.views.students.students_add', name='students_add'),
 	url(r'^students/(?P<sid>\d+)/edit/$','students.views.students.students_edit', name='students_edit'),

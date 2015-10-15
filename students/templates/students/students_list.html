@@ -6,11 +6,12 @@
 
 				{% block title %} База Студентів {% endblock title %}
 
-				{% block content %}
 
 				<!-- Add student button -->
+				{%block but%}
 				<a class="btn btn-primary" href="{%url "students_add"%}">Додати студента</a>
-				<div>
+				{%endblock but%}
+				{% block content %}
 					<!-- Start Students Listing -->
 					<table class="table table-hover table-striped">
 						<thead>
