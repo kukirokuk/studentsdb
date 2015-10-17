@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    # 'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'studentsdb.urls'
@@ -110,4 +110,8 @@ global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
 "django.core.context_processors.request",
 )
 
+PORTAL_URL = 'http://localhost:8000'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 
