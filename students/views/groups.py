@@ -3,23 +3,19 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from ..models.group import Group
+
 #Views for Groups		
 
 def groups_list(request):
-	groups = (
-		{'id': 1,
-		'name': u'MMM-11',
-		'leader': u'Елвіс Преслі'
-		},
-		{'id': 2,
-		'name': u'MMM-21',
-		'leader': u'Фредді Мерк"юрі'
-		},
-		{'id': 3,
-		'name': u'MMM-31',
-		'leader': u'Хуліо Іглесіас'
-		},
-		)
+	groups = Group.objects.all()
+
+	#try to order groups list 
+	order_by = request.GET.get('order_by', '')
+	if order_by in ('id', 'title', 'leader'):
+		groups = groups.order_by(order_by)
+		if request.GET.get('reverse', '') == '1':
+			groups = groups.reverse()
 	return render(request, 'students/groups_list.html', {'groups': groups})
 
 def groups_add(request):
