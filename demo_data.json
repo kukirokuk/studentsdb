@@ -1,0 +1,133 @@
+[
+{
+    "fields": {
+        "username": "sashok",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-10-20T10:57:36.561Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$20000$mvm5WMBLfUui$qJoJmMkFSnMgWV+khK2rviksQe7Lw5/KhwzTMNxD9+A=",
+        "email": "mrfly@yadex.ru",
+        "date_joined": "2015-10-17T13:04:58.168Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "expire_date": "2015-10-31T13:05:07.888Z",
+        "session_data": "M2EzZDM1YmE1M2FlZGZjZjFjMmU1MGUwODUzN2Y2NDdhMWFhMzljMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjEwOTU0MTZiYTQzYTkxZjFhYjQyODQ1ZjY2YjViODFiZDFhMWIyMDciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
+    },
+    "model": "sessions.session",
+    "pk": "0kh3cmp9g8vkhty80bib03rdyxd6y5b6"
+},
+{
+    "fields": {
+        "expire_date": "2015-10-31T12:55:03.025Z",
+        "session_data": "YWE3NmIwMGZhODhhMjU4YzY3NzNmNTM1YTQ1NTQ2YjY0ZjVhMTE4Njp7fQ=="
+    },
+    "model": "sessions.session",
+    "pk": "23dwklrzsl4jklxco20y57ihiqb3sywf"
+},
+{
+    "fields": {
+        "expire_date": "2015-11-03T10:36:20.319Z",
+        "session_data": "M2EzZDM1YmE1M2FlZGZjZjFjMmU1MGUwODUzN2Y2NDdhMWFhMzljMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjEwOTU0MTZiYTQzYTkxZjFhYjQyODQ1ZjY2YjViODFiZDFhMWIyMDciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
+    },
+    "model": "sessions.session",
+    "pk": "8obegpjkyzldux6m6rw1o204rzrhuwy1"
+},
+{
+    "fields": {
+        "expire_date": "2015-11-03T10:57:36.622Z",
+        "session_data": "M2EzZDM1YmE1M2FlZGZjZjFjMmU1MGUwODUzN2Y2NDdhMWFhMzljMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjEwOTU0MTZiYTQzYTkxZjFhYjQyODQ1ZjY2YjViODFiZDFhMWIyMDciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
+    },
+    "model": "sessions.session",
+    "pk": "ceve8toh8l8gl6e52pawz0uh1xuuklni"
+},
+{
+    "fields": {
+        "expire_date": "2015-10-31T12:55:03.858Z",
+        "session_data": "YWE3NmIwMGZhODhhMjU4YzY3NzNmNTM1YTQ1NTQ2YjY0ZjVhMTE4Njp7fQ=="
+    },
+    "model": "sessions.session",
+    "pk": "jrbwwstg5qg3feaj1d16dcw4tiz9e1km"
+},
+{
+    "fields": {
+        "expire_date": "2015-10-31T12:54:06.155Z",
+        "session_data": "YWE3NmIwMGZhODhhMjU4YzY3NzNmNTM1YTQ1NTQ2YjY0ZjVhMTE4Njp7fQ=="
+    },
+    "model": "sessions.session",
+    "pk": "wvkftanhxhfy1evw7kkcmftwn81wetdc"
+},
+{
+    "fields": {
+        "first_name": "Julio",
+        "last_name": "Ivglesias",
+        "middle_name": "\u0425\u0443\u043b\u0456\u043e\u0432\u0438\u0447",
+        "photo": "",
+        "notes": "",
+        "student_group": 1,
+        "birthday": "2015-10-17",
+        "ticket": "10"
+    },
+    "model": "students.student",
+    "pk": 1
+},
+{
+    "fields": {
+        "first_name": "Freddie ",
+        "last_name": "Mercury",
+        "middle_name": "",
+        "photo": "./freddie_SnxGZ9b.jpg",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1946-09-05",
+        "ticket": "4"
+    },
+    "model": "students.student",
+    "pk": 3
+},
+{
+    "fields": {
+        "first_name": "Elvis",
+        "last_name": "\u041f\u0440\u0435\u0441\u043b\u0456",
+        "middle_name": "",
+        "photo": "./elvis_PHBP7zJ.jpg",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1935-01-07",
+        "ticket": "8"
+    },
+    "model": "students.student",
+    "pk": 4
+},
+{
+    "fields": {
+        "first_name": "Octavian",
+        "last_name": "Augustus",
+        "middle_name": "",
+        "photo": "",
+        "notes": "",
+        "student_group": null,
+        "birthday": "0014-11-10",
+        "ticket": "57"
+    },
+    "model": "students.student",
+    "pk": 5
+},
+{
+    "fields": {
+        "notes": "",
+        "leader": 1,
+        "title": "MMM"
+    },
+    "model": "students.group",
+    "pk": 1
+}
+]
