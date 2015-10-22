@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -76,12 +77,13 @@ def students_add(request):
 			
 			student_group = request.POST.get('student_group', '').strip()
 			if not student_group:
-				errors['student_group'] = u"Оберіть групу для студента"
+			    errors['student_group'] = u"Оберіть групу для студента"
 			else:
-				groups = Group.objects.filter(pk=student_group)
-				if len(groups) != 1:
-					errors['student_group'] = u"Оберіть коректну групу"	
-				else: data['student_group'] = student_group
+			    groups = Group.objects.filter(pk=student_group)
+			    if len(groups) != 1:
+			        errors['student_group'] = u"Оберіть коректну групу"
+			    else:
+			        data['student_group'] = groups[0]
 
 			photo = request.FILES.get('photo')
 			if photo:
@@ -91,25 +93,12 @@ def students_add(request):
 			if not errors:
 				student = Student(**data)
 				student.save()
-				# student = Student(
-				# 	first_name=request.POST['first_name'],
-				# 	last_name=request.POST['last_name'],
-				# 	middle_name=request.POST['middle_name'],
-				# 	birthday=request.POST['birthday'],
-				# 	ticket=request.POST['ticket'],
-				# 	student_group=Group.objects.get(pk=request.POST['student_group']),
-				# 	photo=request.FILES['photo'],
-
-				# 	)
-
-				#зберігаємо до бази даних
 
 				# Повертаємо користувача до списку студентів
-				return HttpResponseRedirect(reverse('home'))
+				return HttpResponseRedirect(u'%s?status_message=Студента %s %s  успішно додано!' %(reverse('home'), data['last_name'], data['first_name']))
 
 				# Якщо дані були введені некоректно:
 			else:
-
 				# Віддаємо шаблон форми разом із знайденими помилками
 				return render(request,'students/students_add.html',
 						{'groups': Group.objects.all().order_by('title'),
@@ -118,7 +107,8 @@ def students_add(request):
 			# Якщо кнопка Скасувати була натиснута:
 		elif request.POST.get('cancel_button') is not None:
 				# Повертаємо користувача до списку студентів
-			return HttpResponseRedirect(reverse('home'))
+			return HttpResponseRedirect(
+				u'%s?status_message=Додавання студента скасовано!' %reverse('home'))
 			
 		# Якщо форма не була запощена:
 	else:
