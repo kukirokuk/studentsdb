@@ -18,7 +18,17 @@ from django.conf import global_settings
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+PORTAL_URL = 'http://localhost:8000'
 
+# email settings
+# please, set here you smtp server details and your admin email
+ADMIN_EMAIL = 'oleksanr.v@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'oleksanr.v@gmail.com'
+EMAIL_HOST_PASSWORD = 'bambu4ara#82'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -40,6 +50,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #side apps
+    'crispy_forms',
+    #my apps
     'students',
 )
 
@@ -109,3 +122,4 @@ PORTAL_URL = 'http://localhost:8000'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

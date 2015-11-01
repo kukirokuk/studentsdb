@@ -1,7 +1,6 @@
 
 from django.conf.urls import include, url, patterns
 from django.contrib import admin
-from django.conf.urls import patterns, include, url
 
 urlpatterns = [
 	#Journal urls
@@ -22,6 +21,8 @@ urlpatterns = [
          name='groups_delete'),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^contact-admin/$', 'students.views.contact_admin.contact_admin',
+        name='contact_admin'),
 ]
 
 from .settings import MEDIA_ROOT, DEBUG
