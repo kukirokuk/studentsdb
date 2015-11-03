@@ -54,6 +54,8 @@ INSTALLED_APPS = (
     'crispy_forms',
     #my apps
     'students',
+    #test app
+    'fts',
 )
 
 MIDDLEWARE_CLASSES = (
