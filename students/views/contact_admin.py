@@ -78,3 +78,5 @@ class CustomContactFormView(FormView):
     def get_success_url(self):
         message = "Повідомлення успішно відправлене"
         return u'%s?status_message=%s' %(reverse('home'), message)
+    def save():
+        pass    
