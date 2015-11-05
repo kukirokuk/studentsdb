@@ -47,8 +47,8 @@
 					<li role="presentation" {% if url_journal in request.path %}class="active"{%endif %}><a href="{% url "journal" %}">Відвідування</a></li>
 					{% url "groups" as url_groups %}
 					<li role="presentation" {% if url_groups in request.path%}class="active"{% endif %}><a href="{% url "groups" %}">Групи</a></li>
-					{% url "contact_admin" as url_contact_admin %}
-					<li role="presentation" {% if url_contact_admin in request.path%}class="active"{% endif %}><a href="{% url "contact_admin" %}">Контакт</a></li>
+					{% url "contact_form" as url_contact_form %}
+					<li role="presentation" {% if url_contact_form in request.path%}class="active"{% endif %}><a href="{% url "contact_form" %}">Контакт</a></li>
         </ul>				
 			</div>			
 		</div>

@@ -24,11 +24,12 @@ PORTAL_URL = 'http://localhost:8000'
 # please, set here you smtp server details and your admin email
 ADMIN_EMAIL = 'oleksanr.v@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '465'
+EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'oleksanr.v@gmail.com'
-EMAIL_HOST_PASSWORD = 'bambu4ara#82'
+EMAIL_HOST_PASSWORD = '222'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
