@@ -2,7 +2,7 @@
 from django.conf.urls import include, url, patterns
 from django.contrib import admin
 from students.views.students import StudentUpdateView
-from students.views.students import StudentUpdateView, StudentDeleteView
+from students.views.students import StudentUpdateView, StudentDeleteView, StudentCreateView
 from students.views.contact_admin import CustomContactFormView
 
 urlpatterns = [
@@ -10,7 +10,7 @@ urlpatterns = [
 	url(r'journal$', 'students.views.journal.journal', name='journal'),
 	#Students urls
 	url(r'^$', 'students.views.students.students_list', name='home'),
-	url(r'students/add/$', 'students.views.students.students_add', name='students_add'),
+	url(r'students/add/$', StudentCreateView.as_view(), name='students_add'),
     url(r'^students/(?P<pk>\d+)/edit/$',StudentUpdateView.as_view(), name='students_edit'),	
     url(r'^students/(?P<pk>\d+)/delete/$',StudentDeleteView.as_view(), name='students_delete'),
 
@@ -24,12 +24,9 @@ urlpatterns = [
          name='groups_delete'),
 
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'^contact-admin/$', 'students.views.contact_admin.contact_admin',
-    #     name='contact_admin'),
-    url(r'^contact-admin/', CustomContactFormView.as_view(), name='contact_form'),
-    # url(r'^contact-form-sent/', CustomContactFormView.as_view(), name='contact_form_sent'),
 
-    # url('^contact-admin/', include('contact_form.urls')),
+    url(r'^contact-admin/', CustomContactFormView.as_view(), name='contact_form'),
+
 
     ]
 

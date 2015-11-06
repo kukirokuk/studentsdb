@@ -1,5 +1,5 @@
 {% extends "students/base.html" %}
-
+{% load crispy_forms_tags %}
 {% load static from staticfiles %}
 
 {% block meta_title %} Додати Студента {% endblock meta_title %}
@@ -15,10 +15,8 @@
 Будь-ласка, виправте наступні помилки
 </div>
 {% endif %}
-
-
-
-<form  class="form-horizontal" action="{% url "students_add" %}" method="post" enctype="multipart/form-data">
+{% crispy form %}
+<!-- <form  class="form-horizontal" action="{% url "students_add" %}" method="post" enctype="multipart/form-data">
 {% csrf_token %}
 	<div class="form-group" {% if errors.first_name %}has-error{% endif%}>
 		<label for="first_name" class="col-sm-2 control-label">Ім'я*</label>
@@ -88,6 +86,6 @@
 			<button type="submit" name="cancel_button" class="btn btn-link">Скасувати</button>
 		</div>
 	</div>
-</form>
+</form> -->
 
 {% endblock content %}
