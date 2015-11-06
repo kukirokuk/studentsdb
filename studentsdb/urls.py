@@ -2,7 +2,7 @@
 from django.conf.urls import include, url, patterns
 from django.contrib import admin
 from students.views.students import StudentUpdateView, StudentDeleteView, StudentCreateView
-from students.views.groups import GroupCreateView, GroupUpdateView
+from students.views.groups import GroupCreateView, GroupUpdateView,GroupDeleteView
 from students.views.contact_admin import CustomContactFormView
 
 urlpatterns = [
@@ -17,10 +17,8 @@ urlpatterns = [
 	#Groups urls
     url(r'^groups/$', 'students.views.groups.groups_list', name='groups'),
     url(r'^groups/add/$', GroupCreateView.as_view(), name='groups_add'),
-    url(r'^groups/(?P<pk>\d+)/edit/$', GroupUpdateView.as_view(),
-         name='groups_edit'),
-    url(r'^groups/(?P<gid>\d+)/delete/$', 'students.views.groups.groups_delete',
-         name='groups_delete'),
+    url(r'^groups/(?P<pk>\d+)/edit/$', GroupUpdateView.as_view(), name='groups_edit'),
+    url(r'^groups/(?P<pk>\d+)/delete/$', GroupDeleteView.as_view(), name='groups_delete'),
 
     url(r'^admin/', include(admin.site.urls)),
 

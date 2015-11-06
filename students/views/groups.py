@@ -115,5 +115,9 @@ class GroupUpdateView(UpdateView):
             return super(GroupUpdateView, self).post(request, *args, **kwargs)
 
 
-def groups_delete(request, gid):
-    return HttpResponse('<h1>Delete Group %s</h1>' % gid)
+class GroupDeleteView(DeleteView):
+    model = Group
+    template_name = 'students/groups_confirm_delete.html'
+
+    def get_success_url(self):
+        return u'%s?status_message=Групу успішно видалено!' %reverse('home')
