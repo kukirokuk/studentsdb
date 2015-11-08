@@ -4,10 +4,11 @@ from django.contrib import admin
 from students.views.students import StudentUpdateView, StudentDeleteView, StudentCreateView
 from students.views.groups import GroupCreateView, GroupUpdateView,GroupDeleteView
 from students.views.contact_admin import CustomContactFormView
+from students.views.journal import JournalView
 
 urlpatterns = [
 	#Journal urls
-	url(r'journal$', 'students.views.journal.journal', name='journal'),
+	url(r'^journal/$', JournalView.as_view(), name='journal'),
 	#Students urls
 	url(r'^$', 'students.views.students.students_list', name='home'),
 	url(r'students/add/$', StudentCreateView.as_view(), name='students_add'),
