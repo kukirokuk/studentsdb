@@ -12,7 +12,6 @@ from ..models.student import Student
 from ..models.monthjournal import MonthJournal 
 from ..util import paginate, get_current_group
 
-
 class JournalView(TemplateView):
     template_name = 'students/journal.html'
 
@@ -48,7 +47,6 @@ class JournalView(TemplateView):
         context['month_header'] = [{'day': d,
             'verbose': day_abbr[weekday(myear, mmonth, d)][:2]}
             for d in range(1, number_of_days+1)]
-        print context['month_header']
 
         # get all students from database, or just one if we need to
         # display journal for one student; also check if we need to
@@ -86,6 +84,7 @@ class JournalView(TemplateView):
                     'date': date(myear, mmonth, day).strftime(
                         '%Y-%m-%d'),
                 })
+
             # prepare metadata for current student
             students.append({
                 'fullname': u'%s %s' % (student.last_name, student.first_name),
@@ -93,6 +92,7 @@ class JournalView(TemplateView):
                 'id': student.id,
                 'update_url': update_url,
             })
+
         # apply pagination, 10 students per page
         context = paginate(students, 10, self.request, context,
             var_name='students')

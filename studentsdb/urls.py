@@ -8,7 +8,7 @@ from students.views.journal import JournalView
 
 urlpatterns = [
 	#Journal urls
-	url(r'^journal/$', JournalView.as_view(), name='journal'),
+	url(r'^journal/(?P<pk>\d+)?/?$', JournalView.as_view(), name='journal'),
 	#Students urls
 	url(r'^$', 'students.views.students.students_list', name='home'),
 	url(r'students/add/$', StudentCreateView.as_view(), name='students_add'),

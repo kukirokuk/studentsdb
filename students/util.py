@@ -25,7 +25,7 @@ def paginate(objects, size, request, context, var_name='object_list'):
 def get_groups(request):
     """Returns list of existing groups"""
     # deferred import of Group model to avoid cycled imports
-    from .models import Group
+    from .models.group import Group
 
     # get currently selected group
     cur_group = get_current_group(request)
@@ -48,7 +48,7 @@ def get_current_group(request):
     pk = request.COOKIES.get('current_group')
 
     if pk:
-        from .models import Group
+        from .models.group import Group
         try:
             group = Group.objects.get(pk=int(pk))
         except Group.DoesNotExist:
