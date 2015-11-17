@@ -14,11 +14,21 @@ DATABASES = {
 
         'HOST': 'localhost',
 
-        'USER': 'students_db_user',
+        #'USER': 'students_db_user',
 
-        'PASSWORD': 'password',
+        #'PASSWORD': 'password',
+
+        'USER': 'root',
+
+        'PASSWORD': '222',
 
         'NAME': 'students-db',
+
+        'TEST': {
+            'CHARSET': 'utf8',
+            'COLLATION': 'utf8_general_ci',
+        }
+
 
     }
 
